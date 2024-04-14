@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-A0m4zHV5k9Tp5vdfg4hu3Ry6f8T7V6vYcA+6H0AoD2hLeEuSLgtbeG0D5dQBPhVn7hA4Q6/lc3S+6lfNz3YmKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="fyle 1024a.png" alt="Company Logo">
+  </div>
+
+  <div class="container">
+    <div class="background-svg"></div> <!-- SVG background div -->
+    <div class="content">
+      <h2 style="text-align: center; margin-bottom: 15px;">Tax Calculator</h2>
+      <form id="taxForm">
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <select id="age" class="form-control">
+            <option value="">Select Age</option>
+            <option value="under40">Under 40</option>
+            <option value="40to60">40 to 60</option>
+            <option value="over60">60 or older</option>
+          </select>
+          <span class="error-icon" id="ageError"></span>
+        </div>
+        <div class="form-group ">
+          <label for="income" class="tooltip">Annual Income___  
+            <i class="fas fa-info-circle info-icon" id="incomeInfo" ></i>
+          </label>
+          <input type="number" id="income" class="form-control">
+          <span class="error-icon" id="incomeError"  class="form-control"></span>
+        </div>
+        <div class="form-group">
+          <label for="deductions" class="tooltip">Applicable Deductions___
+            <i class="fas fa-info-circle info-icon" id="deductionsInfo"></i>
+          </label>
+          <input type="number" id="deductions" class="form-control">
+          <span class="error-icon" id="deductionsError"></span>
+        </div>
+        
+        <button type="button" id="submitBtn" >Submit</button>
+      </form>
+    </div>
+  </div>
+  <button id="themeToggle">Toggle Theme</button>  
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Tax Calculation Result</h2>
+    <p id="result"></p>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
